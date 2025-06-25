@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="TestSuite" time="11.303" tests="16" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="TestSuite" time="11.082" tests="16" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="21"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
@@ -13,7 +13,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="AE"/>
     <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk-21.jdk/Contents/Home/lib"/>
-    <property name="sun.java.command" value="/Users/asifuae1983/Desktop/AUTOMATION/AUTOMATION-WORKSPACES/API-WORKSPACES/GitHubApiTestingFramework/GitHubProject/restassured-framework/target/surefire/surefirebooter-20250625102749736_3.jar /Users/asifuae1983/Desktop/AUTOMATION/AUTOMATION-WORKSPACES/API-WORKSPACES/GitHubApiTestingFramework/GitHubProject/restassured-framework/target/surefire 2025-06-25T10-27-49_699-jvmRun1 surefire-20250625102749736_1tmp surefire_0-20250625102749736_2tmp"/>
+    <property name="sun.java.command" value="/Users/asifuae1983/Desktop/AUTOMATION/AUTOMATION-WORKSPACES/API-WORKSPACES/GitHubApiTestingFramework/GitHubProject/restassured-framework/target/surefire/surefirebooter-20250625110800899_3.jar /Users/asifuae1983/Desktop/AUTOMATION/AUTOMATION-WORKSPACES/API-WORKSPACES/GitHubApiTestingFramework/GitHubProject/restassured-framework/target/surefire 2025-06-25T11-08-00_858-jvmRun1 surefire-20250625110800899_1tmp surefire_0-20250625110800899_2tmp"/>
     <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="/Users/asifuae1983/Desktop/AUTOMATION/AUTOMATION-WORKSPACES/API-WORKSPACES/GitHubApiTestingFramework/GitHubProject/restassured-framework/target/test-classes:/Users/asifuae1983/Desktop/AUTOMATION/AUTOMATION-WORKSPACES/API-WORKSPACES/GitHubApiTestingFramework/GitHubProject/restassured-framework/target/classes:/Users/asifuae1983/.m2/repository/io/rest-assured/rest-assured/5.4.0/rest-assured-5.4.0.jar:/Users/asifuae1983/.m2/repository/org/apache/groovy/groovy/4.0.16/groovy-4.0.16.jar:/Users/asifuae1983/.m2/repository/org/apache/groovy/groovy-xml/4.0.16/groovy-xml-4.0.16.jar:/Users/asifuae1983/.m2/repository/org/apache/httpcomponents/httpclient/4.5.13/httpclient-4.5.13.jar:/Users/asifuae1983/.m2/repository/org/apache/httpcomponents/httpcore/4.4.13/httpcore-4.4.13.jar:/Users/asifuae1983/.m2/repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar:/Users/asifuae1983/.m2/repository/commons-codec/commons-codec/1.11/commons-codec-1.11.jar:/Users/asifuae1983/.m2/repository/org/apache/httpcomponents/httpmime/4.5.13/httpmime-4.5.13.jar:/Users/asifuae1983/.m2/repository/org/ccil/cowan/tagsoup/tagsoup/1.2.1/tagsoup-1.2.1.jar:/Users/asifuae1983/.m2/repository/io/rest-assured/json-path/5.4.0/json-path-5.4.0.jar:/Users/asifuae1983/.m2/repository/org/apache/groovy/groovy-json/4.0.16/groovy-json-4.0.16.jar:/Users/asifuae1983/.m2/repository/io/rest-assured/rest-assured-common/5.4.0/rest-assured-common-5.4.0.jar:/Users/asifuae1983/.m2/repository/io/rest-assured/xml-path/5.4.0/xml-path-5.4.0.jar:/Users/asifuae1983/.m2/repository/org/apache/commons/commons-lang3/3.11/commons-lang3-3.11.jar:/Users/asifuae1983/.m2/repository/org/testng/testng/7.10.2/testng-7.10.2.jar:/Users/asifuae1983/.m2/repository/org/slf4j/slf4j-api/1.7.36/slf4j-api-1.7.36.jar:/Users/asifuae1983/.m2/repository/com/beust/jcommander/1.82/jcommander-1.82.jar:/Users/asifuae1983/.m2/repository/org/webjars/jquery/3.7.1/jquery-3.7.1.jar:/Users/asifuae1983/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.17.1/jackson-databind-2.17.1.jar:/Users/asifuae1983/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.17.1/jackson-annotations-2.17.1.jar:/Users/asifuae1983/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.17.1/jackson-core-2.17.1.jar:/Users/asifuae1983/.m2/repository/org/hamcrest/hamcrest/2.2/hamcrest-2.2.jar:/Users/asifuae1983/.m2/repository/io/qameta/allure/allure-testng/2.24.0/allure-testng-2.24.0.jar:/Users/asifuae1983/.m2/repository/io/qameta/allure/allure-java-commons/2.24.0/allure-java-commons-2.24.0.jar:/Users/asifuae1983/.m2/repository/io/qameta/allure/allure-model/2.24.0/allure-model-2.24.0.jar:/Users/asifuae1983/.m2/repository/io/qameta/allure/allure-test-filter/2.24.0/allure-test-filter-2.24.0.jar:"/>
@@ -31,7 +31,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="apple.awt.application.name" value="ForkedBooter"/>
-    <property name="surefire.real.class.path" value="/Users/asifuae1983/Desktop/AUTOMATION/AUTOMATION-WORKSPACES/API-WORKSPACES/GitHubApiTestingFramework/GitHubProject/restassured-framework/target/surefire/surefirebooter-20250625102749736_3.jar"/>
+    <property name="surefire.real.class.path" value="/Users/asifuae1983/Desktop/AUTOMATION/AUTOMATION-WORKSPACES/API-WORKSPACES/GitHubApiTestingFramework/GitHubProject/restassured-framework/target/surefire/surefirebooter-20250625110800899_3.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.runtime.version" value="21.0.3+7-LTS-152"/>
@@ -59,7 +59,7 @@
     <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.class.version" value="65.0"/>
   </properties>
-  <testcase name="testGetRepository" classname="tests.RepositoryApiTest" time="1.073">
+  <testcase name="testGetRepository" classname="tests.RepositoryApiTest" time="1.012">
     <system-out><![CDATA[Starting test suite: Surefire test
 Starting test: testGetRepository
 &amp#27;[33mTest passed: testGetRepository&amp#27;[0m
@@ -69,37 +69,37 @@ SLF4J: Defaulting to no-operation (NOP) logger implementation
 SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
 ]]></system-err>
   </testcase>
-  <testcase name="testUpdateRepository" classname="tests.RepositoryApiTest" time="0.542">
+  <testcase name="testUpdateRepository" classname="tests.RepositoryApiTest" time="0.47">
     <system-out><![CDATA[Test passed: testGetRepository
 Starting test: testUpdateRepository
 &amp#27;[33mTest passed: testUpdateRepository&amp#27;[0m
 ]]></system-out>
   </testcase>
-  <testcase name="testListRepositoryActivities" classname="tests.RepositoryApiTest" time="0.358">
+  <testcase name="testListRepositoryActivities" classname="tests.RepositoryApiTest" time="0.341">
     <system-out><![CDATA[Test passed: testUpdateRepository
 Starting test: testListRepositoryActivities
 &amp#27;[33mTest passed: testListRepositoryActivities (activities/events found)&amp#27;[0m
 ]]></system-out>
   </testcase>
-  <testcase name="testCheckDependabotSecurityUpdatesEnabled" classname="tests.RepositoryApiTest" time="0.278">
+  <testcase name="testCheckDependabotSecurityUpdatesEnabled" classname="tests.RepositoryApiTest" time="0.286">
     <system-out><![CDATA[Test passed: testListRepositoryActivities
 Starting test: testCheckDependabotSecurityUpdatesEnabled
 &amp#27;[33mTest passed: testCheckDependabotSecurityUpdatesEnabled (200 response)&amp#27;[0m
 ]]></system-out>
   </testcase>
-  <testcase name="testListRepositoryContributors" classname="tests.RepositoryApiTest" time="0.36">
+  <testcase name="testListRepositoryContributors" classname="tests.RepositoryApiTest" time="0.404">
     <system-out><![CDATA[Test passed: testCheckDependabotSecurityUpdatesEnabled
 Starting test: testListRepositoryContributors
 &amp#27;[33mTest passed: testListRepositoryContributors. Contributors: [tebeka, minusnine, asifuae1983, tekkamanendless, hnakamur, crantok, Hexcles, fodpeter, nveeser, RaviTezu, DrMarcII, llonchj, hkeide, bcspragu, x-Xymos, tinyshrimp, ramblex, jucasansao, edef1c, vishnukarthikl, xemoe, serge1peshcoff, r-shestilovski, rtm7777, crazcalm, skunkworker, jmhodges, donny-son, BenKnigge]&amp#27;[0m
 ]]></system-out>
   </testcase>
-  <testcase name="testListAllPublicRepositories" classname="tests.RepositoryApiTest" time="0.606">
+  <testcase name="testListAllPublicRepositories" classname="tests.RepositoryApiTest" time="0.518">
     <system-out><![CDATA[Test passed: testListRepositoryContributors
 Starting test: testListAllPublicRepositories
 &amp#27;[33mTest passed: testListAllPublicRepositories. Count: 100. Names: [grit, merb-core, rubinius, god, jsawesome, jspec, exception_logger, ambition, restful-authentication, attachment_fu, microsis, s3, taboo, foxtracs, fotomatic, glowstick, starling, merb-more, thin, resource_controller, markaby, enum_field, subtlety, zippy, cache_fu, phosphor, sinatra, gsa-prototype, duplikate, lazy_record, gsa-feeds, votigoto, mofo, xhtmlize, ruby-git, bmhsearch, mofo, simply_versioned, gchart, schemr, calais, chronic, git-wiki, signal-wiki, ruby-on-rails-tmbundle, low-pro-for-jquery, merb-core, dst, yaws, yaws, tasks, ruby-on-rails-tmbundle, amazon-ec2, merblogger, merbtastic, alogr, autozest, rnginx, simply_versioned, switchpipe, arc, ebay4r, merb-plugins, ram, ambitious_activeldap, fitter_happier, oebfare, credit_card_tools, rorem, braid, uploadcolumn, ruby-on-rails-tmbundle, rack-mirror, coset-mirror, javascript-unittest-tmbundle, eycap, gitsum, sequel-model, god, blerb-core, django-mptt, bus-scheme, javascript-bits, groomlake, forgery, ambitious-sphinx, soup, rails, backpacking, capsize, starling, ape, awesomeness, audited, acts_as_geocodable, acts_as_money, calendar_builder, clear_empty_attributes, css_naked_day, imap_authenticatable]&amp#27;[0m
 ]]></system-out>
   </testcase>
-  <testcase name="testListAllPublicRepositoriesWithPagination" classname="tests.RepositoryApiTest" time="1.862">
+  <testcase name="testListAllPublicRepositoriesWithPagination" classname="tests.RepositoryApiTest" time="2.057">
     <system-out><![CDATA[Test passed: testListAllPublicRepositories
 Starting test: testListAllPublicRepositoriesWithPagination
 &amp#27;[33mTest passed: testListAllPublicRepositoriesWithPagination (Page 1: 100 repositories)&amp#27;[0m
@@ -109,43 +109,43 @@ Starting test: testListAllPublicRepositoriesWithPagination
 &amp#27;[33mTest passed: testListAllPublicRepositoriesWithPagination. Total repositories fetched from 4 pages: 400. Names: [grit, merb-core, rubinius, god, jsawesome, jspec, exception_logger, ambition, restful-authentication, attachment_fu, microsis, s3, taboo, foxtracs, fotomatic, glowstick, starling, merb-more, thin, resource_controller, markaby, enum_field, subtlety, zippy, cache_fu, phosphor, sinatra, gsa-prototype, duplikate, lazy_record, gsa-feeds, votigoto, mofo, xhtmlize, ruby-git, bmhsearch, mofo, simply_versioned, gchart, schemr, calais, chronic, git-wiki, signal-wiki, ruby-on-rails-tmbundle, low-pro-for-jquery, merb-core, dst, yaws, yaws, tasks, ruby-on-rails-tmbundle, amazon-ec2, merblogger, merbtastic, alogr, autozest, rnginx, simply_versioned, switchpipe, arc, ebay4r, merb-plugins, ram, ambitious_activeldap, fitter_happier, oebfare, credit_card_tools, rorem, braid, uploadcolumn, ruby-on-rails-tmbundle, rack-mirror, coset-mirror, javascript-unittest-tmbundle, eycap, gitsum, sequel-model, god, blerb-core, django-mptt, bus-scheme, javascript-bits, groomlake, forgery, ambitious-sphinx, soup, rails, backpacking, capsize, starling, ape, awesomeness, audited, acts_as_geocodable, acts_as_money, calendar_builder, clear_empty_attributes, css_naked_day, imap_authenticatable, grit, merb-core, rubinius, god, jsawesome, jspec, exception_logger, ambition, restful-authentication, attachment_fu, microsis, s3, taboo, foxtracs, fotomatic, glowstick, starling, merb-more, thin, resource_controller, markaby, enum_field, subtlety, zippy, cache_fu, phosphor, sinatra, gsa-prototype, duplikate, lazy_record, gsa-feeds, votigoto, mofo, xhtmlize, ruby-git, bmhsearch, mofo, simply_versioned, gchart, schemr, calais, chronic, git-wiki, signal-wiki, ruby-on-rails-tmbundle, low-pro-for-jquery, merb-core, dst, yaws, yaws, tasks, ruby-on-rails-tmbundle, amazon-ec2, merblogger, merbtastic, alogr, autozest, rnginx, simply_versioned, switchpipe, arc, ebay4r, merb-plugins, ram, ambitious_activeldap, fitter_happier, oebfare, credit_card_tools, rorem, braid, uploadcolumn, ruby-on-rails-tmbundle, rack-mirror, coset-mirror, javascript-unittest-tmbundle, eycap, gitsum, sequel-model, god, blerb-core, django-mptt, bus-scheme, javascript-bits, groomlake, forgery, ambitious-sphinx, soup, rails, backpacking, capsize, starling, ape, awesomeness, audited, acts_as_geocodable, acts_as_money, calendar_builder, clear_empty_attributes, css_naked_day, imap_authenticatable, grit, merb-core, rubinius, god, jsawesome, jspec, exception_logger, ambition, restful-authentication, attachment_fu, microsis, s3, taboo, foxtracs, fotomatic, glowstick, starling, merb-more, thin, resource_controller, markaby, enum_field, subtlety, zippy, cache_fu, phosphor, sinatra, gsa-prototype, duplikate, lazy_record, gsa-feeds, votigoto, mofo, xhtmlize, ruby-git, bmhsearch, mofo, simply_versioned, gchart, schemr, calais, chronic, git-wiki, signal-wiki, ruby-on-rails-tmbundle, low-pro-for-jquery, merb-core, dst, yaws, yaws, tasks, ruby-on-rails-tmbundle, amazon-ec2, merblogger, merbtastic, alogr, autozest, rnginx, simply_versioned, switchpipe, arc, ebay4r, merb-plugins, ram, ambitious_activeldap, fitter_happier, oebfare, credit_card_tools, rorem, braid, uploadcolumn, ruby-on-rails-tmbundle, rack-mirror, coset-mirror, javascript-unittest-tmbundle, eycap, gitsum, sequel-model, god, blerb-core, django-mptt, bus-scheme, javascript-bits, groomlake, forgery, ambitious-sphinx, soup, rails, backpacking, capsize, starling, ape, awesomeness, audited, acts_as_geocodable, acts_as_money, calendar_builder, clear_empty_attributes, css_naked_day, imap_authenticatable, grit, merb-core, rubinius, god, jsawesome, jspec, exception_logger, ambition, restful-authentication, attachment_fu, microsis, s3, taboo, foxtracs, fotomatic, glowstick, starling, merb-more, thin, resource_controller, markaby, enum_field, subtlety, zippy, cache_fu, phosphor, sinatra, gsa-prototype, duplikate, lazy_record, gsa-feeds, votigoto, mofo, xhtmlize, ruby-git, bmhsearch, mofo, simply_versioned, gchart, schemr, calais, chronic, git-wiki, signal-wiki, ruby-on-rails-tmbundle, low-pro-for-jquery, merb-core, dst, yaws, yaws, tasks, ruby-on-rails-tmbundle, amazon-ec2, merblogger, merbtastic, alogr, autozest, rnginx, simply_versioned, switchpipe, arc, ebay4r, merb-plugins, ram, ambitious_activeldap, fitter_happier, oebfare, credit_card_tools, rorem, braid, uploadcolumn, ruby-on-rails-tmbundle, rack-mirror, coset-mirror, javascript-unittest-tmbundle, eycap, gitsum, sequel-model, god, blerb-core, django-mptt, bus-scheme, javascript-bits, groomlake, forgery, ambitious-sphinx, soup, rails, backpacking, capsize, starling, ape, awesomeness, audited, acts_as_geocodable, acts_as_money, calendar_builder, clear_empty_attributes, css_naked_day, imap_authenticatable]&amp#27;[0m
 ]]></system-out>
   </testcase>
-  <testcase name="testListAuthenticatedUserRepositories" classname="tests.RepositoryApiTest" time="0.399">
+  <testcase name="testListAuthenticatedUserRepositories" classname="tests.RepositoryApiTest" time="0.378">
     <system-out><![CDATA[Test passed: testListAllPublicRepositoriesWithPagination
 Starting test: testListAuthenticatedUserRepositories
-&amp#27;[33mTest passed: testListAuthenticatedUserRepositories. Count: 3. Names: [PlayWrightTypeScriptProjectAPI, RestAssuredProjectAPI, selenium]&amp#27;[0m
+&amp#27;[33mTest passed: testListAuthenticatedUserRepositories. Count: 4. Names: [GitHub-RestAssured, PlayWrightTypeScriptProjectAPI, RestAssuredProjectAPI, selenium]&amp#27;[0m
 ]]></system-out>
   </testcase>
-  <testcase name="testCreateRepositoryForAuthenticatedUser" classname="tests.RepositoryApiTest" time="1.297">
+  <testcase name="testCreateRepositoryForAuthenticatedUser" classname="tests.RepositoryApiTest" time="1.104">
     <system-out><![CDATA[Test passed: testListAuthenticatedUserRepositories
 Starting test: testCreateRepositoryForAuthenticatedUser
-&amp#27;[33mTest passed: testCreateRepositoryForAuthenticatedUser. Repository: test-repo-1750832875890&amp#27;[0m
+&amp#27;[33mTest passed: testCreateRepositoryForAuthenticatedUser. Repository: test-repo-1750835287035&amp#27;[0m
 ]]></system-out>
   </testcase>
-  <testcase name="testDeleteRepositoryForAuthenticatedUser" classname="tests.RepositoryApiTest" time="0.747">
+  <testcase name="testDeleteRepositoryForAuthenticatedUser" classname="tests.RepositoryApiTest" time="0.613">
     <system-out><![CDATA[Test passed: testCreateRepositoryForAuthenticatedUser
 Starting test: testDeleteRepositoryForAuthenticatedUser
-&amp#27;[33mTest passed: testDeleteRepositoryForAuthenticatedUser. Repository: test-repo-1750832875890&amp#27;[0m
+&amp#27;[33mTest passed: testDeleteRepositoryForAuthenticatedUser. Repository: test-repo-1750835287035&amp#27;[0m
 ]]></system-out>
   </testcase>
-  <testcase name="testListBranches" classname="tests.GetBranchDetailsTest" time="0.474">
+  <testcase name="testListBranches" classname="tests.GetBranchDetailsTest" time="0.405">
     <system-out><![CDATA[Test passed: testDeleteRepositoryForAuthenticatedUser
 Starting test: testListBranches
 &amp#27;[33mTest passed: testListBranches. Branches: [develop, master]&amp#27;[0m
 ]]></system-out>
   </testcase>
-  <testcase name="testGetBranch[master](1)" classname="tests.GetBranchDetailsTest" time="0.399">
+  <testcase name="testGetBranch[master](1)" classname="tests.GetBranchDetailsTest" time="0.409">
     <system-out><![CDATA[Test passed: testListBranches
 Starting test: testGetBranch
 &amp#27;[33mTest passed: testGetBranch. Branch details fetched for: master&amp#27;[0m
 ]]></system-out>
   </testcase>
-  <testcase name="testGetBranch[develop](2)" classname="tests.GetBranchDetailsTest" time="0.393">
+  <testcase name="testGetBranch[develop](2)" classname="tests.GetBranchDetailsTest" time="0.321">
     <system-out><![CDATA[Test passed: testGetBranch
 Starting test: testGetBranch
 &amp#27;[33mTest passed: testGetBranch. Branch details fetched for: develop&amp#27;[0m
 ]]></system-out>
   </testcase>
-  <testcase name="testGetRepositoryContent" classname="tests.CheckRepoContentTest" time="0.354">
+  <testcase name="testGetRepositoryContent" classname="tests.CheckRepoContentTest" time="0.404">
     <system-out><![CDATA[Test passed: testGetBranch
 Starting test: testGetRepositoryContent
 &amp#27;[33mTest passed: testGetRepositoryContent. Fetched content metadata for path: README.md in repo: selenium&amp#27;[0m
@@ -352,13 +352,13 @@ This project is licensed under the [MIT][mit] license.
 &amp#27;[0m
 ]]></system-out>
   </testcase>
-  <testcase name="testCreateFileContent" classname="tests.CheckRepoContentTest" time="0.585">
+  <testcase name="testCreateFileContent" classname="tests.CheckRepoContentTest" time="0.702">
     <system-out><![CDATA[Test passed: testGetRepositoryContent
 Starting test: testCreateFileContent
 &amp#27;[33mTest passed: testCreateFileContent. File 'test-file.txt' created successfully in repo: selenium&amp#27;[0m
 ]]></system-out>
   </testcase>
-  <testcase name="testDeleteFileContent" classname="tests.CheckRepoContentTest" time="0.908">
+  <testcase name="testDeleteFileContent" classname="tests.CheckRepoContentTest" time="1.018">
     <system-out><![CDATA[Test passed: testCreateFileContent
 Starting test: testDeleteFileContent
 &amp#27;[33mTest passed: testDeleteFileContent. File 'test-file.txt' deleted successfully from repo: selenium&amp#27;[0m

@@ -63,3 +63,8 @@ restassured-framework
 - For detailed information on each test case, refer to the `RepositoryApiTest.java` file.
 
 This framework is designed to be easily extendable for additional API testing needs.# GitHub-RestAssured
+
+## Running Test
+- Before running tests setup your environment variable by passing the github token 
+- export GITHUB_TOKEN=Here_Paste_Your_Token
+

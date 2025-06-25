@@ -1,6 +1,9 @@
 # Maven target directory
 /target/
 
+# Allure results
+/allure-results/
+
 # IntelliJ IDEA
 .idea/
 *.iml
