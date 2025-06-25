@@ -1,7 +1,8 @@
-tests/RetryListener.class
-listeners/RetryAnalyzer.class
-tests/RepositoryApiTest.class
 listeners/TestResultListener.class
+listeners/RetryAnalyzer.class
+listeners/RetryListener.class
+tests/RepositoryApiTest.class
+tests/GetCommitDetailsTest.class
 tests/CheckRepoContentTest.class
 utils/ConsoleUtils.class
 pojo/RepositoryTestData.class

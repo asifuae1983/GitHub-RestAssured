@@ -44,7 +44,7 @@ public class CheckRepoContentTest {
     @Feature("Repository Content")
     @Story("Get Repository Content")
     @Description("Checks if the content metadata for a given path in the repository can be fetched successfully.")
-    @Test(priority = 12, retryAnalyzer = RetryAnalyzer.class)
+    @Test(priority = 1, retryAnalyzer = RetryAnalyzer.class)
     public void testGetRepositoryContent() {
         String path = "README.md";
         try {
@@ -92,7 +92,7 @@ public class CheckRepoContentTest {
     @Feature("Repository Content")
     @Story("Create File Content")
     @Description("Creates a new file in the repository using the GitHub API. Fails if the file already exists.")
-    @Test(priority = 13, retryAnalyzer = RetryAnalyzer.class)
+    @Test(priority = 2, retryAnalyzer = RetryAnalyzer.class)
     public void testCreateFileContent() {
         String path = "test-file.txt";
         String content = java.util.Base64.getEncoder().encodeToString("This is a test file created by API.".getBytes());
@@ -136,7 +136,7 @@ public class CheckRepoContentTest {
     @Feature("Repository Content")
     @Story("Delete File Content")
     @Description("Deletes the file test-file.txt in the repository using the GitHub API.")
-    @Test(priority = 14, dependsOnMethods = "testCreateFileContent", retryAnalyzer = RetryAnalyzer.class)
+    @Test(priority = 3, dependsOnMethods = "testCreateFileContent", retryAnalyzer = RetryAnalyzer.class)
     public void testDeleteFileContent() {
         String path = "test-file.txt";
         String commitMessage = "Delete test-file.txt via API";

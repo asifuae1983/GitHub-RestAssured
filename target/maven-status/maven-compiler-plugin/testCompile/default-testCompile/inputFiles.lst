@@ -1,10 +1,11 @@
 /Users/asifuae1983/Desktop/AUTOMATION/AUTOMATION-WORKSPACES/API-WORKSPACES/GitHubApiTestingFramework/GitHubProject/restassured-framework/src/test/java/api/GitHubRepositoryClient.java
 /Users/asifuae1983/Desktop/AUTOMATION/AUTOMATION-WORKSPACES/API-WORKSPACES/GitHubApiTestingFramework/GitHubProject/restassured-framework/src/test/java/listeners/RetryAnalyzer.java
+/Users/asifuae1983/Desktop/AUTOMATION/AUTOMATION-WORKSPACES/API-WORKSPACES/GitHubApiTestingFramework/GitHubProject/restassured-framework/src/test/java/listeners/RetryListener.java
 /Users/asifuae1983/Desktop/AUTOMATION/AUTOMATION-WORKSPACES/API-WORKSPACES/GitHubApiTestingFramework/GitHubProject/restassured-framework/src/test/java/listeners/TestResultListener.java
 /Users/asifuae1983/Desktop/AUTOMATION/AUTOMATION-WORKSPACES/API-WORKSPACES/GitHubApiTestingFramework/GitHubProject/restassured-framework/src/test/java/pojo/RepositoryTestData.java
 /Users/asifuae1983/Desktop/AUTOMATION/AUTOMATION-WORKSPACES/API-WORKSPACES/GitHubApiTestingFramework/GitHubProject/restassured-framework/src/test/java/tests/CheckRepoContentTest.java
 /Users/asifuae1983/Desktop/AUTOMATION/AUTOMATION-WORKSPACES/API-WORKSPACES/GitHubApiTestingFramework/GitHubProject/restassured-framework/src/test/java/tests/GetBranchDetailsTest.java
+/Users/asifuae1983/Desktop/AUTOMATION/AUTOMATION-WORKSPACES/API-WORKSPACES/GitHubApiTestingFramework/GitHubProject/restassured-framework/src/test/java/tests/GetCommitDetailsTest.java
 /Users/asifuae1983/Desktop/AUTOMATION/AUTOMATION-WORKSPACES/API-WORKSPACES/GitHubApiTestingFramework/GitHubProject/restassured-framework/src/test/java/tests/RepositoryApiTest.java
-/Users/asifuae1983/Desktop/AUTOMATION/AUTOMATION-WORKSPACES/API-WORKSPACES/GitHubApiTestingFramework/GitHubProject/restassured-framework/src/test/java/tests/RetryListener.java
 /Users/asifuae1983/Desktop/AUTOMATION/AUTOMATION-WORKSPACES/API-WORKSPACES/GitHubApiTestingFramework/GitHubProject/restassured-framework/src/test/java/utils/Config.java
 /Users/asifuae1983/Desktop/AUTOMATION/AUTOMATION-WORKSPACES/API-WORKSPACES/GitHubApiTestingFramework/GitHubProject/restassured-framework/src/test/java/utils/ConsoleUtils.java

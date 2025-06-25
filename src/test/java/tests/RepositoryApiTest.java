@@ -70,12 +70,17 @@ public class RepositoryApiTest {
     @Test(priority = 1, retryAnalyzer = RetryAnalyzer.class)
     public void testGetRepository() {
         try {
-            repoClient.getRepository()
-                .then()
+            Response response = given()
+                .spec(requestSpec)
+            .when()
+                .get()
+            .then()
                 .log().ifError()
                 .spec(responseSpec200)
                 .body("full_name", equalTo(testData.getOwner() + "/" + testData.getRepo()))
-                .body("private", equalTo(testData.isPrivateRepo()));
+                .body("private", equalTo(testData.isPrivateRepo()))
+                .extract().response();
+
             String msg = "Test passed: testGetRepository";
             printStatus(msg, true);
             Allure.step(msg);
@@ -276,7 +281,7 @@ public class RepositoryApiTest {
     public void testListAllPublicRepositories() {
         try {
             Response response = given()
-                .baseUri("https://api.github.com")
+                .baseUri(Config.getBaseUri()) // Use config-driven base URI
                 .header("Authorization", "Bearer " + Config.getAuthToken())
             .when()
                 .get("/repositories")
@@ -317,8 +322,9 @@ public class RepositoryApiTest {
             int perPage = 30; // GitHub default, can be set up to 100
 
             for (int page = 1; page <= 4; page++) {
-                Response response = given()
-                    .baseUri("https://api.github.com")
+                Response response = 
+                given()
+                    .baseUri(Config.getBaseUri()) // Use config-driven base URI
                     .header("Authorization", "Bearer " + Config.getAuthToken())
                     .queryParam("per_page", perPage)
                     .queryParam("page", page)
@@ -363,7 +369,7 @@ public class RepositoryApiTest {
     public void testListAuthenticatedUserRepositories() {
         try {
             Response response = given()
-                .baseUri("https://api.github.com")
+                .baseUri(Config.getBaseUri()) // Use config-driven base URI
                 .header("Authorization", "Bearer " + Config.getAuthToken())
                 .header("Accept", "application/vnd.github+json")
             .when()
@@ -403,8 +409,9 @@ public class RepositoryApiTest {
         createdRepoName = "test-repo-" + System.currentTimeMillis();
         try {
             String requestBody = "{ \"name\": \"" + createdRepoName + "\", \"description\": \"Repository created via API test\", \"private\": false }";
-            Response response = given()
-                .baseUri("https://api.github.com")
+            Response response = 
+            given()
+                .baseUri(Config.getBaseUri()) // Use config-driven base URI
                 .header("Authorization", "Bearer " + Config.getAuthToken())
                 .header("Accept", "application/vnd.github+json")
                 .header("Content-Type", "application/json")
@@ -445,8 +452,9 @@ public class RepositoryApiTest {
                 Allure.step(msg);
                 assert false : msg;
             }
-            Response response = given()
-                .baseUri("https://api.github.com")
+            Response response = 
+            given()
+                .baseUri(Config.getBaseUri()) // Use config-driven base URI
                 .header("Authorization", "Bearer " + Config.getAuthToken())
                 .header("Accept", "application/vnd.github+json")
             .when()
