@@ -1,0 +1,25 @@
+# Maven target directory
+/target/
+
+# IntelliJ IDEA
+.idea/
+*.iml
+
+# VS Code
+.vscode/
+
+# Mac system files
+.DS_Store
+
+# Logs
+*.log
+
+# Test output
+/surefire-reports/
+/test-output/
+
+# Environment files
+.env
+
+# Node modules (if any JS tools)
+/node_modules/
