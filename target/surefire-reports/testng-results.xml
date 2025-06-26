@@ -2,84 +2,84 @@
 <testng-results ignored="0" total="19" passed="19" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-06-25T14:33:56 GST" name="Surefire suite" finished-at="2025-06-25T14:34:09 GST" duration-ms="13163">
+  <suite started-at="2025-06-26T23:43:08 GST" name="Surefire suite" finished-at="2025-06-26T23:43:21 GST" duration-ms="13385">
     <groups>
     </groups>
-    <test started-at="2025-06-25T14:33:56 GST" name="Surefire test" finished-at="2025-06-25T14:34:09 GST" duration-ms="13163">
+    <test started-at="2025-06-26T23:43:08 GST" name="Surefire test" finished-at="2025-06-26T23:43:21 GST" duration-ms="13385">
       <class name="tests.RepositoryApiTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:tests.RepositoryApiTest@69e1dd28]" started-at="2025-06-25T14:33:56 GST" name="setup" finished-at="2025-06-25T14:33:57 GST" duration-ms="246" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:tests.RepositoryApiTest@69e1dd28]" started-at="2025-06-26T23:43:08 GST" name="setup" finished-at="2025-06-26T23:43:08 GST" duration-ms="262" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="testGetRepository()[pri:1, instance:tests.RepositoryApiTest@69e1dd28]" started-at="2025-06-25T14:33:57 GST" name="testGetRepository" finished-at="2025-06-25T14:33:58 GST" duration-ms="1019" status="PASS">
+        <test-method signature="testGetRepository()[pri:1, instance:tests.RepositoryApiTest@69e1dd28]" started-at="2025-06-26T23:43:08 GST" name="testGetRepository" finished-at="2025-06-26T23:43:09 GST" duration-ms="1044" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testGetRepository -->
-        <test-method signature="testUpdateRepository()[pri:2, instance:tests.RepositoryApiTest@69e1dd28]" started-at="2025-06-25T14:33:58 GST" name="testUpdateRepository" finished-at="2025-06-25T14:33:58 GST" duration-ms="578" status="PASS">
+        <test-method signature="testUpdateRepository()[pri:2, instance:tests.RepositoryApiTest@69e1dd28]" started-at="2025-06-26T23:43:09 GST" name="testUpdateRepository" finished-at="2025-06-26T23:43:10 GST" duration-ms="562" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testUpdateRepository -->
-        <test-method signature="testListRepositoryActivities()[pri:3, instance:tests.RepositoryApiTest@69e1dd28]" started-at="2025-06-25T14:33:58 GST" name="testListRepositoryActivities" finished-at="2025-06-25T14:33:59 GST" duration-ms="388" status="PASS">
+        <test-method signature="testListRepositoryActivities()[pri:3, instance:tests.RepositoryApiTest@69e1dd28]" started-at="2025-06-26T23:43:10 GST" name="testListRepositoryActivities" finished-at="2025-06-26T23:43:10 GST" duration-ms="440" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testListRepositoryActivities -->
-        <test-method signature="testCheckDependabotSecurityUpdatesEnabled()[pri:5, instance:tests.RepositoryApiTest@69e1dd28]" started-at="2025-06-25T14:33:59 GST" name="testCheckDependabotSecurityUpdatesEnabled" finished-at="2025-06-25T14:33:59 GST" duration-ms="335" status="PASS">
+        <test-method signature="testCheckDependabotSecurityUpdatesEnabled()[pri:5, instance:tests.RepositoryApiTest@69e1dd28]" started-at="2025-06-26T23:43:10 GST" name="testCheckDependabotSecurityUpdatesEnabled" finished-at="2025-06-26T23:43:10 GST" duration-ms="380" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testCheckDependabotSecurityUpdatesEnabled -->
-        <test-method signature="testListRepositoryContributors()[pri:6, instance:tests.RepositoryApiTest@69e1dd28]" started-at="2025-06-25T14:33:59 GST" name="testListRepositoryContributors" finished-at="2025-06-25T14:33:59 GST" duration-ms="389" status="PASS">
+        <test-method signature="testListRepositoryContributors()[pri:6, instance:tests.RepositoryApiTest@69e1dd28]" started-at="2025-06-26T23:43:10 GST" name="testListRepositoryContributors" finished-at="2025-06-26T23:43:11 GST" duration-ms="523" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testListRepositoryContributors -->
-        <test-method signature="testListAllPublicRepositories()[pri:7, instance:tests.RepositoryApiTest@69e1dd28]" started-at="2025-06-25T14:33:59 GST" name="testListAllPublicRepositories" finished-at="2025-06-25T14:34:00 GST" duration-ms="504" status="PASS">
+        <test-method signature="testListAllPublicRepositories()[pri:7, instance:tests.RepositoryApiTest@69e1dd28]" started-at="2025-06-26T23:43:11 GST" name="testListAllPublicRepositories" finished-at="2025-06-26T23:43:12 GST" duration-ms="551" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testListAllPublicRepositories -->
-        <test-method signature="testListAllPublicRepositoriesWithPagination()[pri:8, instance:tests.RepositoryApiTest@69e1dd28]" started-at="2025-06-25T14:34:00 GST" name="testListAllPublicRepositoriesWithPagination" finished-at="2025-06-25T14:34:02 GST" duration-ms="2000" status="PASS">
+        <test-method signature="testListAllPublicRepositoriesWithPagination()[pri:8, instance:tests.RepositoryApiTest@69e1dd28]" started-at="2025-06-26T23:43:12 GST" name="testListAllPublicRepositoriesWithPagination" finished-at="2025-06-26T23:43:14 GST" duration-ms="2133" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testListAllPublicRepositoriesWithPagination -->
-        <test-method signature="testListAuthenticatedUserRepositories()[pri:9, instance:tests.RepositoryApiTest@69e1dd28]" started-at="2025-06-25T14:34:02 GST" name="testListAuthenticatedUserRepositories" finished-at="2025-06-25T14:34:02 GST" duration-ms="428" status="PASS">
+        <test-method signature="testListAuthenticatedUserRepositories()[pri:9, instance:tests.RepositoryApiTest@69e1dd28]" started-at="2025-06-26T23:43:14 GST" name="testListAuthenticatedUserRepositories" finished-at="2025-06-26T23:43:14 GST" duration-ms="501" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testListAuthenticatedUserRepositories -->
-        <test-method signature="testCreateRepositoryForAuthenticatedUser()[pri:10, instance:tests.RepositoryApiTest@69e1dd28]" started-at="2025-06-25T14:34:02 GST" name="testCreateRepositoryForAuthenticatedUser" finished-at="2025-06-25T14:34:04 GST" duration-ms="1406" status="PASS">
+        <test-method signature="testCreateRepositoryForAuthenticatedUser()[pri:10, instance:tests.RepositoryApiTest@69e1dd28]" started-at="2025-06-26T23:43:14 GST" name="testCreateRepositoryForAuthenticatedUser" finished-at="2025-06-26T23:43:15 GST" duration-ms="1222" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testCreateRepositoryForAuthenticatedUser -->
-        <test-method signature="testDeleteRepositoryForAuthenticatedUser()[pri:11, instance:tests.RepositoryApiTest@69e1dd28]" started-at="2025-06-25T14:34:04 GST" name="testDeleteRepositoryForAuthenticatedUser" finished-at="2025-06-25T14:34:04 GST" depends-on-methods="tests.RepositoryApiTest.testCreateRepositoryForAuthenticatedUser" duration-ms="650" status="PASS">
+        <test-method signature="testDeleteRepositoryForAuthenticatedUser()[pri:11, instance:tests.RepositoryApiTest@69e1dd28]" started-at="2025-06-26T23:43:15 GST" name="testDeleteRepositoryForAuthenticatedUser" finished-at="2025-06-26T23:43:16 GST" depends-on-methods="tests.RepositoryApiTest.testCreateRepositoryForAuthenticatedUser" duration-ms="610" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testDeleteRepositoryForAuthenticatedUser -->
       </class> <!-- tests.RepositoryApiTest -->
       <class name="tests.CheckRepoContentTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:tests.CheckRepoContentTest@696da30b]" started-at="2025-06-25T14:34:07 GST" name="setup" finished-at="2025-06-25T14:34:07 GST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:tests.CheckRepoContentTest@696da30b]" started-at="2025-06-26T23:43:19 GST" name="setup" finished-at="2025-06-26T23:43:19 GST" duration-ms="2" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="testGetRepositoryContent()[pri:1, instance:tests.CheckRepoContentTest@696da30b]" started-at="2025-06-25T14:34:07 GST" name="testGetRepositoryContent" finished-at="2025-06-25T14:34:08 GST" duration-ms="364" status="PASS">
+        <test-method signature="testGetRepositoryContent()[pri:1, instance:tests.CheckRepoContentTest@696da30b]" started-at="2025-06-26T23:43:19 GST" name="testGetRepositoryContent" finished-at="2025-06-26T23:43:19 GST" duration-ms="433" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testGetRepositoryContent -->
-        <test-method signature="testCreateFileContent()[pri:2, instance:tests.CheckRepoContentTest@696da30b]" started-at="2025-06-25T14:34:08 GST" name="testCreateFileContent" finished-at="2025-06-25T14:34:08 GST" duration-ms="698" status="PASS">
+        <test-method signature="testCreateFileContent()[pri:2, instance:tests.CheckRepoContentTest@696da30b]" started-at="2025-06-26T23:43:19 GST" name="testCreateFileContent" finished-at="2025-06-26T23:43:20 GST" duration-ms="723" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testCreateFileContent -->
-        <test-method signature="testDeleteFileContent()[pri:3, instance:tests.CheckRepoContentTest@696da30b]" started-at="2025-06-25T14:34:08 GST" name="testDeleteFileContent" finished-at="2025-06-25T14:34:09 GST" depends-on-methods="tests.CheckRepoContentTest.testCreateFileContent" duration-ms="890" status="PASS">
+        <test-method signature="testDeleteFileContent()[pri:3, instance:tests.CheckRepoContentTest@696da30b]" started-at="2025-06-26T23:43:20 GST" name="testDeleteFileContent" finished-at="2025-06-26T23:43:21 GST" depends-on-methods="tests.CheckRepoContentTest.testCreateFileContent" duration-ms="1007" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testDeleteFileContent -->
       </class> <!-- tests.CheckRepoContentTest -->
       <class name="tests.GetBranchDetailsTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:tests.GetBranchDetailsTest@5fd4f8f5]" started-at="2025-06-25T14:34:06 GST" name="setup" finished-at="2025-06-25T14:34:06 GST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:tests.GetBranchDetailsTest@5fd4f8f5]" started-at="2025-06-26T23:43:18 GST" name="setup" finished-at="2025-06-26T23:43:18 GST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="testListBranches()[pri:0, instance:tests.GetBranchDetailsTest@5fd4f8f5]" started-at="2025-06-25T14:34:06 GST" name="testListBranches" finished-at="2025-06-25T14:34:07 GST" duration-ms="335" status="PASS">
+        <test-method signature="testListBranches()[pri:0, instance:tests.GetBranchDetailsTest@5fd4f8f5]" started-at="2025-06-26T23:43:18 GST" name="testListBranches" finished-at="2025-06-26T23:43:18 GST" duration-ms="494" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testListBranches -->
-        <test-method signature="testGetBranch(java.lang.String)[pri:16, instance:tests.GetBranchDetailsTest@5fd4f8f5]" started-at="2025-06-25T14:34:07 GST" name="testGetBranch" data-provider="branchProvider" finished-at="2025-06-25T14:34:07 GST" duration-ms="405" status="PASS">
+        <test-method signature="testGetBranch(java.lang.String)[pri:16, instance:tests.GetBranchDetailsTest@5fd4f8f5]" started-at="2025-06-26T23:43:18 GST" name="testGetBranch" data-provider="branchProvider" finished-at="2025-06-26T23:43:19 GST" duration-ms="425" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -90,7 +90,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testGetBranch -->
-        <test-method signature="testGetBranch(java.lang.String)[pri:16, instance:tests.GetBranchDetailsTest@5fd4f8f5]" started-at="2025-06-25T14:34:07 GST" name="testGetBranch" data-provider="branchProvider" finished-at="2025-06-25T14:34:07 GST" duration-ms="360" status="PASS">
+        <test-method signature="testGetBranch(java.lang.String)[pri:16, instance:tests.GetBranchDetailsTest@5fd4f8f5]" started-at="2025-06-26T23:43:19 GST" name="testGetBranch" data-provider="branchProvider" finished-at="2025-06-26T23:43:19 GST" duration-ms="448" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -103,19 +103,19 @@
         </test-method> <!-- testGetBranch -->
       </class> <!-- tests.GetBranchDetailsTest -->
       <class name="tests.GetCommitDetailsTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:tests.GetCommitDetailsTest@72cde7cc]" started-at="2025-06-25T14:34:04 GST" name="setup" finished-at="2025-06-25T14:34:04 GST" duration-ms="2" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:tests.GetCommitDetailsTest@72cde7cc]" started-at="2025-06-26T23:43:16 GST" name="setup" finished-at="2025-06-26T23:43:16 GST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="testListCommits()[pri:1, instance:tests.GetCommitDetailsTest@72cde7cc]" started-at="2025-06-25T14:34:04 GST" name="testListCommits" finished-at="2025-06-25T14:34:05 GST" duration-ms="443" status="PASS">
+        <test-method signature="testListCommits()[pri:1, instance:tests.GetCommitDetailsTest@72cde7cc]" started-at="2025-06-26T23:43:16 GST" name="testListCommits" finished-at="2025-06-26T23:43:17 GST" duration-ms="475" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testListCommits -->
-        <test-method signature="testGetCommitByRef()[pri:2, instance:tests.GetCommitDetailsTest@72cde7cc]" started-at="2025-06-25T14:34:05 GST" name="testGetCommitByRef" finished-at="2025-06-25T14:34:05 GST" duration-ms="609" status="PASS">
+        <test-method signature="testGetCommitByRef()[pri:2, instance:tests.GetCommitDetailsTest@72cde7cc]" started-at="2025-06-26T23:43:17 GST" name="testGetCommitByRef" finished-at="2025-06-26T23:43:17 GST" duration-ms="453" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testGetCommitByRef -->
-        <test-method signature="testCompareCommits()[pri:3, instance:tests.GetCommitDetailsTest@72cde7cc]" started-at="2025-06-25T14:34:05 GST" name="testCompareCommits" finished-at="2025-06-25T14:34:06 GST" duration-ms="1012" status="PASS">
+        <test-method signature="testCompareCommits()[pri:3, instance:tests.GetCommitDetailsTest@72cde7cc]" started-at="2025-06-26T23:43:17 GST" name="testCompareCommits" finished-at="2025-06-26T23:43:18 GST" duration-ms="613" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testCompareCommits -->

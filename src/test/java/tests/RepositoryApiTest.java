@@ -20,6 +20,7 @@ import java.io.IOException;
 import java.util.List;
 import java.util.ArrayList;
 import java.util.Map;
+import java.util.HashMap;
 
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.*;
@@ -70,7 +71,7 @@ public class RepositoryApiTest {
     @Test(priority = 1, retryAnalyzer = RetryAnalyzer.class)
     public void testGetRepository() {
         try {
-            Response response = given()
+            given()
                 .spec(requestSpec)
             .when()
                 .get()
@@ -104,9 +105,10 @@ public class RepositoryApiTest {
     @Test(priority = 2, retryAnalyzer = RetryAnalyzer.class)
     public void testUpdateRepository() {
         try {
-            String updateBodyJson = "{ \"name\": \"" + testData.getRepo() + "\", \"description\": \"" + testData.getUpdateDescription() + "\" }";
-            ObjectMapper mapper = new ObjectMapper();
-            Map<String, Object> updateBody = mapper.readValue(updateBodyJson, Map.class);
+            Map<String, Object> updateBody = new HashMap<>();
+            updateBody.put("name", testData.getRepo());
+            updateBody.put("description", testData.getUpdateDescription());
+
             given()
                 .spec(requestSpec)
                 .body(updateBody)
@@ -203,7 +205,8 @@ public class RepositoryApiTest {
     @Test(priority = 5, retryAnalyzer = RetryAnalyzer.class)
     public void testCheckDependabotSecurityUpdatesEnabled() {
         try {
-            Response response = given()
+            Response response = 
+            given()
                 .spec(requestSpec)
             .when()
                 .get("/automated-security-fixes")
@@ -243,7 +246,8 @@ public class RepositoryApiTest {
     @Test(priority = 6, retryAnalyzer = RetryAnalyzer.class)
     public void testListRepositoryContributors() {
         try {
-            Response response = given()
+            Response response = 
+            given()
                 .spec(requestSpec)
             .when()
                 .get("/contributors")
@@ -280,7 +284,8 @@ public class RepositoryApiTest {
     @Test(priority = 7, retryAnalyzer = RetryAnalyzer.class)
     public void testListAllPublicRepositories() {
         try {
-            Response response = given()
+            Response response = 
+            given()
                 .baseUri(Config.getBaseUri()) // Use config-driven base URI
                 .header("Authorization", "Bearer " + Config.getAuthToken())
             .when()
@@ -368,10 +373,15 @@ public class RepositoryApiTest {
     @Test(priority = 9, retryAnalyzer = RetryAnalyzer.class)
     public void testListAuthenticatedUserRepositories() {
         try {
-            Response response = given()
-                .baseUri(Config.getBaseUri()) // Use config-driven base URI
-                .header("Authorization", "Bearer " + Config.getAuthToken())
+            RequestSpecification userRequestSpec = RestAssured.given()
+                .baseUri(Config.getBaseUri())
                 .header("Accept", "application/vnd.github+json")
+                .header("Authorization", "Bearer " + Config.getAuthToken());
+
+            Response response = 
+            given()
+                .spec(userRequestSpec)
+                .log().ifValidationFails() // Log request/response if validation fails
             .when()
                 .get("/user/repos")
             .then()
@@ -409,7 +419,6 @@ public class RepositoryApiTest {
         createdRepoName = "test-repo-" + System.currentTimeMillis();
         try {
             String requestBody = "{ \"name\": \"" + createdRepoName + "\", \"description\": \"Repository created via API test\", \"private\": false }";
-            Response response = 
             given()
                 .baseUri(Config.getBaseUri()) // Use config-driven base URI
                 .header("Authorization", "Bearer " + Config.getAuthToken())

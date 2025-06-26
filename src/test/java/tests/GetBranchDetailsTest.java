@@ -4,6 +4,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import io.qameta.allure.*;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
+import io.restassured.specification.RequestSpecification;
 import listeners.RetryAnalyzer;
 
 import org.testng.Assert;
@@ -25,6 +26,7 @@ import static org.hamcrest.Matchers.*;
 public class GetBranchDetailsTest {
 
     private RepositoryTestData testData;
+    private RequestSpecification requestSpec;
 
     // Utility method for colored output: yellow for pass, red for fail
     private void printStatus(String msg, boolean isPass) {
@@ -37,6 +39,9 @@ public class GetBranchDetailsTest {
         ObjectMapper mapper = new ObjectMapper();
         testData = mapper.readValue(new File("src/test/resources/testdata/TestData.json"), RepositoryTestData.class);
         RestAssured.baseURI = Config.getBaseUri();
+        requestSpec = given()
+                .header("Authorization", "Bearer " + Config.getAuthToken())
+                .header("Accept", "application/vnd.github+json");
     }
 
     /**
@@ -51,8 +56,7 @@ public class GetBranchDetailsTest {
     public void testListBranches() {
         try {
             Response response = given()
-                .header("Authorization", "Bearer " + Config.getAuthToken())
-                .header("Accept", "application/vnd.github+json")
+                .spec(requestSpec)
             .when()
                 .get("/repos/" + testData.getOwner() + "/" + testData.getRepo() + "/branches")
             .then()
@@ -77,7 +81,7 @@ public class GetBranchDetailsTest {
             printStatus(msg, false);
             e.printStackTrace();
             Allure.step("Exception in testListBranches: " + e.getMessage());
-            assert false : "Exception in testGetBranch: " + e.getMessage();
+            assert false : "Exception in testListBranches: " + e.getMessage();
         }
     }
 
@@ -93,8 +97,7 @@ public class GetBranchDetailsTest {
     public void testGetBranch(String branch) {
         try {
             Response response = given()
-                .header("Authorization", "Bearer " + Config.getAuthToken())
-                .header("Accept", "application/vnd.github+json")
+                .spec(requestSpec)
             .when()
                 .get("/repos/" + testData.getOwner() + "/" + testData.getRepo() + "/branches/" + branch)
             .then()

@@ -4,6 +4,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import io.qameta.allure.*;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
+import io.restassured.specification.RequestSpecification;
 import listeners.RetryAnalyzer;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
@@ -23,6 +24,7 @@ import static org.hamcrest.Matchers.*;
 public class GetCommitDetailsTest {
 
     private RepositoryTestData testData;
+    private RequestSpecification requestSpec;
 
     // Utility method for colored output: yellow for pass, red for fail
     private void printStatus(String msg, boolean isPass) {
@@ -35,6 +37,9 @@ public class GetCommitDetailsTest {
         ObjectMapper mapper = new ObjectMapper();
         testData = mapper.readValue(new File("src/test/resources/testdata/TestData.json"), RepositoryTestData.class);
         RestAssured.baseURI = Config.getBaseUri();
+        requestSpec = given()
+                .header("Authorization", "Bearer " + Config.getAuthToken())
+                .header("Accept", "application/vnd.github+json");
     }
 
     /**
@@ -48,9 +53,9 @@ public class GetCommitDetailsTest {
     @Test(priority = 1, retryAnalyzer = RetryAnalyzer.class)
     public void testListCommits() {
         try {
-            Response response = given()
-                .header("Authorization", "Bearer " + Config.getAuthToken())
-                .header("Accept", "application/vnd.github+json")
+            Response response = 
+            given()
+                .spec(requestSpec)
             .when()
                 .get("/repos/" + testData.getOwner() + "/" + testData.getRepo() + "/commits")
             .then()
@@ -91,9 +96,9 @@ public class GetCommitDetailsTest {
     public void testGetCommitByRef() {
         String ref = "master"; // You can replace with a specific commit SHA or branch/tag name
         try {
-            Response response = given()
-                .header("Authorization", "Bearer " + Config.getAuthToken())
-                .header("Accept", "application/vnd.github+json")
+            Response response = 
+            given()
+                .spec(requestSpec)
             .when()
                 .get("/repos/" + testData.getOwner() + "/" + testData.getRepo() + "/commits/" + ref)
             .then()
@@ -129,9 +134,9 @@ public class GetCommitDetailsTest {
         String head = "develop";  // You can change this to any head branch or commit SHA
         String basehead = base + "..." + head;
         try {
-            Response response = given()
-                .header("Authorization", "Bearer " + Config.getAuthToken())
-                .header("Accept", "application/vnd.github+json")
+            Response response = 
+            given()
+                .spec(requestSpec)
             .when()
                 .get("/repos/" + testData.getOwner() + "/" + testData.getRepo() + "/compare/" + basehead)
             .then()

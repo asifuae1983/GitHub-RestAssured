@@ -4,8 +4,10 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import io.qameta.allure.*;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
+import io.restassured.specification.RequestSpecification;
 import listeners.RetryAnalyzer;
 
+import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
@@ -14,6 +16,8 @@ import utils.Config;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
 
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.*;
@@ -22,6 +26,7 @@ import static org.hamcrest.Matchers.*;
 public class CheckRepoContentTest {
 
     private RepositoryTestData testData;
+    private RequestSpecification requestSpec;
 
     // Utility method for colored output: yellow for pass, red for fail
     private void printStatus(String msg, boolean isPass) {
@@ -34,6 +39,9 @@ public class CheckRepoContentTest {
         ObjectMapper mapper = new ObjectMapper();
         testData = mapper.readValue(new File("src/test/resources/testdata/TestData.json"), RepositoryTestData.class);
         RestAssured.baseURI = Config.getBaseUri();
+        requestSpec = given()
+                .header("Authorization", "Bearer " + Config.getAuthToken())
+                .header("Accept", "application/vnd.github+json");
     }
 
     /**
@@ -49,8 +57,7 @@ public class CheckRepoContentTest {
         String path = "README.md";
         try {
             Response response = given()
-                .header("Authorization", "Bearer " + Config.getAuthToken())
-                .header("Accept", "application/vnd.github+json")
+                .spec(requestSpec)
             .when()
                 .get("/repos/" + testData.getOwner() + "/" + testData.getRepo() + "/contents/" + path)
             .then()
@@ -80,7 +87,7 @@ public class CheckRepoContentTest {
             printStatus(msg, false);
             e.printStackTrace();
             Allure.step("Exception in testGetRepositoryContent: " + e.getMessage());
-            assert false : "Exception in testGetBranch: " + e.getMessage();
+            Assert.fail("Exception in testGetRepositoryContent: " + e.getMessage(), e);
         }
     }    
 
@@ -98,17 +105,15 @@ public class CheckRepoContentTest {
         String content = java.util.Base64.getEncoder().encodeToString("This is a test file created by API.".getBytes());
         String commitMessage = "Create test-file.txt via API";
         try {
-            // Prepare request body
-            String requestBody = "{"
-                + "\"message\": \"" + commitMessage + "\","
-                + "\"content\": \"" + content + "\""
-                + "}";
+            // Prepare request body using a Map for better maintainability
+            Map<String, Object> requestBody = new HashMap<>();
+            requestBody.put("message", commitMessage);
+            requestBody.put("content", content);
 
-            Response response = given()
-                .header("Authorization", "Bearer " + Config.getAuthToken())
-                .header("Accept", "application/vnd.github+json")
+            given()
+                .spec(requestSpec)
                 .header("Content-Type", "application/json")
-                .body(requestBody)
+                .body(requestBody) // RestAssured will serialize the map to JSON
             .when()
                 .put("/repos/" + testData.getOwner() + "/" + testData.getRepo() + "/contents/" + path)
             .then()
@@ -124,7 +129,7 @@ public class CheckRepoContentTest {
             printStatus(msg, false);
             e.printStackTrace();
             Allure.step("Exception in testCreateFileContent: " + e.getMessage());
-            assert false : "Exception in testGetBranch: " + e.getMessage();
+            Assert.fail("Exception in testCreateFileContent: " + e.getMessage(), e);
         }
     }
     
@@ -142,9 +147,9 @@ public class CheckRepoContentTest {
         String commitMessage = "Delete test-file.txt via API";
         try {
             // Step 1: Get the file's SHA
-            Response getResponse = given()
-                .header("Authorization", "Bearer " + Config.getAuthToken())
-                .header("Accept", "application/vnd.github+json")
+            Response getResponse = 
+            given()
+                .spec(requestSpec)
             .when()
                 .get("/repos/" + testData.getOwner() + "/" + testData.getRepo() + "/contents/" + path)
             .then()
@@ -153,23 +158,20 @@ public class CheckRepoContentTest {
 
             String sha = getResponse.jsonPath().getString("sha");
 
-            // Step 2: Prepare delete request body
-            String requestBody = "{"
-                + "\"message\": \"" + commitMessage + "\","
-                + "\"sha\": \"" + sha + "\""
-                + "}";
+            // Step 2: Prepare delete request body using a Map for better maintainability
+            Map<String, Object> requestBody = new HashMap<>();
+            requestBody.put("message", commitMessage);
+            requestBody.put("sha", sha);
 
             // Step 3: Delete the file
-            Response deleteResponse = given()
-                .header("Authorization", "Bearer " + Config.getAuthToken())
-                .header("Accept", "application/vnd.github+json")
+            given()
+                .spec(requestSpec)
                 .header("Content-Type", "application/json")
-                .body(requestBody)
+                .body(requestBody) // RestAssured will serialize the map to JSON
             .when()
                 .delete("/repos/" + testData.getOwner() + "/" + testData.getRepo() + "/contents/" + path)
             .then()
-                .statusCode(200)
-                .extract().response();
+                .statusCode(200);
 
             String msg = "Test passed: testDeleteFileContent. File '" + path + "' deleted successfully from repo: " + testData.getRepo();
             printStatus(msg, true);
@@ -179,7 +181,7 @@ public class CheckRepoContentTest {
             printStatus(msg, false);
             e.printStackTrace();
             Allure.step("Exception in testDeleteFileContent: " + e.getMessage());
-            assert false : "Exception in testGetBranch: " + e.getMessage();
+            Assert.fail("Exception in testDeleteFileContent: " + e.getMessage(), e);
         }
     }
 }
