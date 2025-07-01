@@ -11,10 +11,12 @@ import io.restassured.response.Response;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
+import org.testng.Assert;
 import utils.Config;
 import utils.ConsoleUtils;
 import pojo.RepositoryTestData;
-
+import pojo.RepositoryResponse;
+import pojo.RepositoryUpdateRequest;
 import java.io.File;
 import java.io.IOException;
 import java.util.List;
@@ -23,7 +25,10 @@ import java.util.Map;
 import java.util.HashMap;
 
 import static io.restassured.RestAssured.given;
-import static org.hamcrest.Matchers.*;
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.anyOf;
+import static org.hamcrest.Matchers.equalTo;
+import static org.hamcrest.Matchers.is;
 
 @Listeners({io.qameta.allure.testng.AllureTestNg.class, listeners.TestResultListener.class})
 public class RepositoryApiTest {
@@ -71,16 +76,28 @@ public class RepositoryApiTest {
     @Test(priority = 1, retryAnalyzer = RetryAnalyzer.class)
     public void testGetRepository() {
         try {
-            given()
+            // --- Serialization would happen here if you were sending a POJO as a request body (not in this GET test) ---
+
+            RepositoryResponse repoResponse = given()
                 .spec(requestSpec)
             .when()
                 .get()
             .then()
                 .log().ifError()
-                .spec(responseSpec200)
-                .body("full_name", equalTo(testData.getOwner() + "/" + testData.getRepo()))
-                .body("private", equalTo(testData.isPrivateRepo()))
-                .extract().response();
+                .statusCode(200)
+                .extract().as(RepositoryResponse.class); // <-- Deserialization: JSON response to POJO
+
+            // Assertions using POJO fields
+            assertThat("Repository full_name mismatch",
+                repoResponse.getFull_name(),
+                is(equalTo(testData.getOwner() + "/" + testData.getRepo()))
+            );
+
+            // Assert that the repository's privacy status matches the expected value
+            assertThat("Repository privacy mismatch",
+                repoResponse.isPrivate(),
+                is(equalTo(testData.isPrivateRepo()))
+            );
 
             String msg = "Test passed: testGetRepository";
             printStatus(msg, true);
@@ -105,18 +122,28 @@ public class RepositoryApiTest {
     @Test(priority = 2, retryAnalyzer = RetryAnalyzer.class)
     public void testUpdateRepository() {
         try {
-            Map<String, Object> updateBody = new HashMap<>();
-            updateBody.put("name", testData.getRepo());
-            updateBody.put("description", testData.getUpdateDescription());
+            // --- Serialization: Java POJO to JSON ---
+            RepositoryUpdateRequest updateRequest = new RepositoryUpdateRequest(
+                testData.getRepo(),
+                testData.getUpdateDescription()
+            );
 
-            given()
+            // --- Deserialization: JSON response to POJO ---
+            RepositoryResponse repoResponse = given()
                 .spec(requestSpec)
-                .body(updateBody)
+                .body(updateRequest)
             .when()
                 .patch()
             .then()
                 .statusCode(200)
-                .body("description", equalTo(testData.getUpdateDescription()));
+                .extract().as(RepositoryResponse.class); // ✅
+
+            // Assertions using POJO fields
+            assertThat("Repository description mismatch",
+                repoResponse.getDescription(),
+                is(equalTo(testData.getUpdateDescription()))
+            );
+
             String msg = "Test passed: testUpdateRepository";
             printStatus(msg, true);
             Allure.step(msg);
@@ -147,7 +174,7 @@ public class RepositoryApiTest {
             .then()
                 .statusCode(200)
                 .extract().response();
-
+            
             String msg;
             if (response.jsonPath().getList("$").isEmpty()) {
                 msg = "Test passed: testListRepositoryActivities (no activities/events found, empty array is valid)";
